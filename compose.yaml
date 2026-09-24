@@ -8,4 +8,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - auth:/var/lib/postgresql/data
+      - auth-db-data:/var/lib/postgresql
+volumes:
+  auth-db-data:
+
