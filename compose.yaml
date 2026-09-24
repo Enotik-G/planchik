@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_DB: auth
+      POSTGRES_USER: auth
+      POSTGRES_PASSWORD: auf67
+    ports:
+      - "5432:5432"
+    volumes:
+      - auth-db-data:/var/lib/postgresql
+volumes:
+  auth-db-data:
+
